@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2024 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="lifebuoy" unicode="&#xe800;" d="M443 793q182 0 312-130t130-313-130-312-312-131-313 131-130 312 130 313 313 130z m338-443q0 81-37 154l-100-100q7-26 7-54t-7-54l100-100q37 73 37 154z m-677 0q0-81 37-154l102 102q-8 26-8 52 0 28 8 54l-102 100q-37-73-37-154z m160 105q27 46 74 74l-93 92-74-73z m74-284q-45 25-74 74l-93-92 74-74z m31 105q30-30 74-30t73 30q32 32 32 74t-31 73-74 31q-43 0-74-31t-30-73q0-44 30-74z m345 272l-74 73-92-92q46-28 73-74z m-93-303q-28-49-73-74l92-92 74 74z m-25 406q-72 38-153 38t-154-38l101-101q30 9 53 9t53-9z m-307-602q72-38 154-38t153 38l-100 101q-31-9-53-9t-53 9z" horiz-adv-x="885" />
+</font>
+</defs>
+</svg>
