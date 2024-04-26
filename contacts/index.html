@@ -1664,6 +1664,30 @@ li ul:not(.sc_item_filters_tabs) {
 			.octf-btn {
 				text-transform: uppercase !important;
 			}
+			
+			.widget ul > li a:first-child:before {
+				content: ' ';
+				display: none;
+				width: 0x;
+				height: 0px;
+				line-height: 6px;
+				text-align: center;
+				-webkit-border-radius: 50%;
+				-ms-border-radius: 50%;
+				border-radius: 50%;
+				position: absolute;
+				z-index: 1;
+				top: 0.7em;
+				left: -1.1em;
+				-webkit-transition: all 0.3s ease;
+				-ms-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+				background-color: var(--theme-color-text_dark);
+			}
+			
+			input[type=email] {
+				background: #f6f6f600;
+			}
 		</style>
 		
 </body>
