@@ -1,3 +1,35 @@
+<?php
+
+if (isset($_POST["inputEmail"])) {
+    
+    $recipient="testUser@localhost.com";
+    $SendingEmail= "postmaster@localhost.com";
+    $subject="Message from website visitor";
+
+  if ($_POST["inputEmail"] != '' && $_POST["inputName"] != '' && $_POST["msgTextarea"] != '') {
+	
+	$SenderEmail= filter_input(INPUT_POST, "inputEmail", FILTER_SANITIZE_EMAIL);
+    $sender= filter_var($_POST["inputName"], FILTER_SANITIZE_STRING);
+
+    $message= filter_var($_POST["msgTextarea"], FILTER_SANITIZE_STRING);
+
+    $mailBody="Name: $sender\n\nEmail: $SenderEmail\n\n Visitor Message: $message";
+
+  if (mail($recipient, $subject, $mailBody, "From: Contact Form Mail System  <postmaster@localhost.com>")) {
+echo '<script>alert("Thank you! Your message has been sent.\r\n A member of the team will respond soon.")</script>';
+}  else {
+echo '<script>alert("Sorry! We could not send your message at this time. Please try again later.")</script>';
+}
+
+} else {
+echo '<script>alert("Please review your entries and try again.")</script>';
+}
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en-US" class="no-js scheme_default">
 <head>
@@ -72,7 +104,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 <link property="stylesheet" rel='stylesheet' id='trx_demo_icons-css' href='../wp-content/plugins/trx_demo/css/font-icons/css/trx_demo_icons.css' type='text/css' media='all' />
 <link property="stylesheet" rel='stylesheet' id='trx_demo_icons_animation-css' href='../wp-content/plugins/trx_demo/css/font-icons/css/animation.css' type='text/css' media='all' />
 <link property="stylesheet" rel='stylesheet' id='qw_extensions-icons-css' href='../wp-content/plugins/trx_addons/addons/qw-extension/css/font-icons/css/qw_extension_icons.css' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='n7-golf-club-font-google_fonts-css' href='../https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;subset=latin,latin-ext&amp;display=swap' type='text/css' media='all' />
 <link property="stylesheet" rel='stylesheet' id='n7-golf-club-fontello-css' href='../wp-content/themes/n7-golf-club/skins/default/css/font-icons/css/fontello.css' type='text/css' media='all' />
 <link property="stylesheet" rel='stylesheet' id='sbi_styles-css' href='../wp-content/plugins/instagram-feed/css/sbi-styles.minfc7a.css?ver=6.0.6' type='text/css' media='all' />
 <style id='wp-emoji-styles-inline-css' type='text/css'>
@@ -747,20 +778,13 @@ color: #fff;}</style>
 											<p role="status" aria-live="polite" aria-atomic="true"></p>
 											<ul></ul>
 										</div>
-										<form action="/engitech/contacts/#wpcf7-f1379-p1370-o1" method="post" class="wpcf7-form resetting" aria-label="Contact form" novalidate="novalidate" data-status="resetting">
-											<div style="display: none;">
-												<input type="hidden" name="_wpcf7" value="1379" />
-												<input type="hidden" name="_wpcf7_version" value="5.9.3" />
-												<input type="hidden" name="_wpcf7_locale" value="en_US" />
-												<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1379-p1370-o1" />
-												<input type="hidden" name="_wpcf7_container_post" value="1370" />
-												<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-											</div>
+										<form method="post" class="wpcf7-form" source="email" name="form" aria-label="Contact form">
+											
 											<div class="main-form">
 												<h2>Ready to Get Started?</h2>
 												<p class="font14">Your email address will not be published. Required fields are marked *</p>
 												<p>
-													<span class="wpcf7-form-control-wrap" data-name="your-name">
+													<span class="wpcf7-form-control-wrap" data-name="inputName">
 														<input
 															size="40"
 															class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
@@ -769,12 +793,12 @@ color: #fff;}</style>
 															placeholder="Your Name *"
 															value=""
 															type="text"
-															name="your-name"
+															name="inputName"
 														/>
 													</span>
 												</p>
 												<p>
-													<span class="wpcf7-form-control-wrap" data-name="your-email">
+													<span class="wpcf7-form-control-wrap" data-name="inputEmail">
 														<input
 															size="40"
 															class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
@@ -783,18 +807,22 @@ color: #fff;}</style>
 															placeholder="Your Email *"
 															value=""
 															type="email"
-															name="your-email"
+															name="inputEmail"
 														/>
 													</span>
 												</p>
 												<p>
 													<span class="wpcf7-form-control-wrap" data-name="your-message">
-														<textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message..." name="your-message"></textarea>
+														<textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message..." name="msgTextarea"></textarea>
 													</span>
 												</p>
-												<p><button type="submit" class="octf-btn octf-btn-light has-spinner">Send Message</button><span class="wpcf7-spinner"></span></p>
+
+												<p>
+												<button type="submit" class="octf-btn octf-btn-light">Send Message</button>
+												</p>
+
 											</div>
-											<div class="wpcf7-response-output" aria-hidden="true"></div>
+											
 										</form>
 									</div>
 								</div>
@@ -1306,12 +1334,7 @@ var booked_js_vars = {"ajax_url":"https:\/\/golfclub.themerex.net\/wp-admin\/adm
 <script type="text/javascript" src="../wp-includes/js/dist/vendor/wp-polyfill-inert.min0226.js?ver=3.1.2" id="wp-polyfill-inert-js"></script>
 <script type="text/javascript" src="../wp-includes/js/dist/vendor/regenerator-runtime.min6c85.js?ver=0.14.0" id="regenerator-runtime-js"></script>
 <script type="text/javascript" src="../wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0" id="wp-polyfill-js"></script>
-<script type="text/javascript" id="contact-form-7-js-extra">
-/* <![CDATA[ */
-var wpcf7 = {"api":{"root":"https:\/\/golfclub.themerex.net\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" defer="defer" src="../wp-content/plugins/contact-form-7/includes/js/index4c7e.js?ver=5.6.2" id="contact-form-7-js"></script>
+
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/revslider/public/assets/js/rbtools.min8331.js?ver=6.5.18" async id="tp-tools-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/revslider/public/assets/js/rs6.min9f6d.js?ver=6.5.31" async id="revmin-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js" id="magnific-popup-js"></script>
@@ -1365,7 +1388,6 @@ var TRX_ADDONS_STORAGE = {"admin_mode":"","ajax_url":"https:\/\/golfclub.themere
 /* ]]> */
 </script>
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/trx_addons/js/scripts.js" id="trx_addons-js"></script>
-<script type="text/javascript" defer="defer" src="../wp-content/plugins/trx_addons/components/api/contact-form-7/contact-form-7.js" id="trx_addons-cf7-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/trx_addons/components/api/woocommerce/woocommerce.js" id="trx_addons-woocommerce-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/trx_addons/addons/mouse-helper/mouse-helper.js" id="trx_addons-mouse-helper-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/plugins/trx_addons/components/cpt/layouts/shortcodes/menu/superfish.min.js" id="superfish-js"></script>
@@ -1399,7 +1421,6 @@ var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPr
 <script type="text/javascript" defer="defer" src="../wp-includes/js/mediaelement/wp-mediaelement.min84fc.js?ver=6.4.3" id="wp-mediaelement-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/themes/n7-golf-club/skins/default/skin.js" id="n7-golf-club-skin-default-js"></script>
 <script type="text/javascript" defer="defer" src="../wp-content/themes/n7-golf-club/plugins/woocommerce/woocommerce.js" id="n7-golf-club-woocommerce-js"></script>
-<script type="text/javascript" defer="defer" src="../wp-content/themes/n7-golf-club/plugins/contact-form-7/contact-form-7.js" id="n7-golf-club-contact-form-7-js"></script>
 <script type="text/javascript" defer src="../wp-content/plugins/mailchimp-for-wp/assets/js/forms6c42.js?ver=4.8.7" id="mc4wp-forms-api-js"></script>
 <script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/webpack.runtime.minf3df.js?ver=3.7.2" id="elementor-webpack-runtime-js"></script>
 <script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/frontend-modules.minf3df.js?ver=3.7.2" id="elementor-frontend-modules-js"></script>
@@ -1559,13 +1580,13 @@ li ul:not(.sc_item_filters_tabs) {
 	
 	<script type="text/javascript" id="ppress-frontend-script-js-extra">
 		/* <![CDATA[ */
-		var pp_ajax_form = {"ajaxurl":"https:\/\/wpdemo.archiwp.com\/engitech\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"d3eeb8581a","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+		var pp_ajax_form = {"ajaxurl":"/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"d3eeb8581a","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
 		/* ]]> */
 		</script>
 		
 		<script type="text/javascript" id="elementor-frontend-js-before">
 		/* <![CDATA[ */
-		var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":true},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.16.6","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"additional_custom_breakpoints":true,"landing-pages":true},"urls":{"assets":"https:\/\/wpdemo.archiwp.com\/engitech\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":2274,"title":"Engitech%20%E2%80%93%20IT%20Solutions%20Demo%20WordPress%20Theme","excerpt":"","featuredImage":false}};
+		var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":true},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.16.6","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"additional_custom_breakpoints":true,"landing-pages":true},"urls":{"assets":"/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper-container","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":2274,"title":"Engitech%20%E2%80%93%20IT%20Solutions%20Demo%20WordPress%20Theme","excerpt":"","featuredImage":false}};
 		/* ]]> */
 		</script>
 		
@@ -1689,6 +1710,12 @@ li ul:not(.sc_item_filters_tabs) {
 				background: #f6f6f600;
 			}
 		</style>
+		
+		<script type="text/javascript" >			
+			document.addEventListener('wpcf7submit', function(e) {
+				e.preventDefault();
+			}, false);
+		</script>
 		
 </body>
 
