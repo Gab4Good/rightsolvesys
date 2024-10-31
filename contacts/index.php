@@ -682,16 +682,16 @@ color: #fff;}</style>
                 </nav>
                 <div class="socials_mobile">
                     <a target="_blank" href="https://business.facebook.com/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
-                        <span class="social_icon social_icon_facebook-1" style=""><span class="icon-facebook-1"></span></span>
+                        <span class="social_icon social_icon_facebook-1"><span class="icon-facebook-1"></span></span>
                     </a>
                     <a target="_blank" href="https://twitter.com/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
-                        <span class="social_icon social_icon_twitter-new" style=""><span class="icon-twitter-new"></span></span>
+                        <span class="social_icon social_icon_twitter-new"><span class="icon-twitter-new"></span></span>
                     </a>
                     <a target="_blank" href="https://dribbble.com/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
-                        <span class="social_icon social_icon_dribble-new" style=""><span class="icon-dribble-new"></span></span>
+                        <span class="social_icon social_icon_dribble-new"><span class="icon-dribble-new"></span></span>
                     </a>
                     <a target="_blank" href="https://www.instagram.com/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
-                        <span class="social_icon social_icon_instagram" style=""><span class="icon-instagram"></span></span>
+                        <span class="social_icon social_icon_instagram"><span class="icon-instagram"></span></span>
                     </a>
                 </div>
             </div>
@@ -750,7 +750,7 @@ color: #fff;}</style>
 									<i class="flaticon-envelope"></i>
 									<div class="info-text">
 										<h6>Our Mailbox:</h6>
-										<p>info@rightsolvesys.com</p>
+										<p>engage@rightsolvesys.com</p>
 									</div>
 								</div>
 							</div>
@@ -761,7 +761,7 @@ color: #fff;}</style>
 									<i class="flaticon-phone-1"></i>
 									<div class="info-text">
 										<h6>Our Phone:</h6>
-										<p>+234 816 4513 139</p>
+										<p>+234 707 551 1670</p>
 									</div>
 								</div>
 							</div>
@@ -973,7 +973,7 @@ color: #fff;}</style>
                         >
                             <div class="elementor-widget-container">
                                 <div class="elementor-text-editor elementor-clearfix">
-                                    <p><a class="underline_anim" href="mailto:info@rightsolvesys.com">info@rightsolvesys.com</a></p>
+                                    <p><a class="underline_anim" href="mailto:engage@rightsolvesys.com">engage@rightsolvesys.com</a></p>
                                 </div>
                             </div>
                         </div>
@@ -993,7 +993,7 @@ color: #fff;}</style>
                             <div class="elementor-widget-container">
                                 <div class="elementor-text-editor elementor-clearfix">
                                     <p>
-                                        <span class="trx_addons_alter_text"><a href="tel:+18408412569">+234 816 4513 139</a></span>
+                                        <span class="trx_addons_alter_text"><a href="tel:+2347075511670">+234 707 551 1670</a></span>
                                     </p>
                                 </div>
                             </div>
@@ -1225,7 +1225,7 @@ color: #fff;}</style>
 				<div class="elementor-element elementor-element-6655a08c sc_fly_static elementor-widget elementor-widget-trx_sc_socials" data-id="6655a08c" data-element_type="widget" data-widget_type="trx_sc_socials.default">
 				<div class="elementor-widget-container">
 			<div  
-		class="sc_socials sc_socials_icons_names sc_align_left" ><div class="socials_wrap sc_item_content"><a target="_blank" href="https://facebook.com/rightsolvesys/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_facebook-1" style=""><span class="icon-facebook-1"></span></span><span class="social_name social_facebook-1">Facebook</span></a><a target="_blank" href="https://twitter.com/rightsolvesys" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_twitter-new" style=""><span class="icon-twitter-new"></span></span><span class="social_name social_twitter-new">Twitter</span></a><a target="_blank" href="https://dribbble.com/rightsolvesys" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_dribble-new" style=""><span class="icon-dribble-new"></span></span><span class="social_name social_dribble-new">Dribble</span></a><a target="_blank" href="https://www.instagram.com/rightsolvesys/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_instagram" style=""><span class="icon-instagram"></span></span><span class="social_name social_instagram">Instagram</span></a></div></div>		</div>
+		class="sc_socials sc_socials_icons_names sc_align_left" ><div class="socials_wrap sc_item_content"><a target="_blank" href="https://facebook.com/rightsolvesys/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_facebook-1"><span class="icon-facebook-1"></span></span><span class="social_name social_facebook-1">Facebook</span></a><a target="_blank" href="https://twitter.com/rightsolvesys" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_twitter-new"><span class="icon-twitter-new"></span></span><span class="social_name social_twitter-new">Twitter</span></a><a target="_blank" href="https://dribbble.com/rightsolvesys" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_dribble-new"><span class="icon-dribble-new"></span></span><span class="social_name social_dribble-new">Dribble</span></a><a target="_blank" href="https://www.instagram.com/rightsolvesys/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons_names"><span class="social_icon social_icon_instagram"><span class="icon-instagram"></span></span><span class="social_name social_instagram">Instagram</span></a></div></div>		</div>
 				</div>
 				<section class="elementor-section elementor-inner-section elementor-element elementor-element-8d88f99 elementor-section-boxed elementor-section-height-default elementor-section-height-default sc_fly_static" data-id="8d88f99" data-element_type="section">
 						<div class="elementor-container elementor-column-gap-no">
@@ -1235,7 +1235,7 @@ color: #fff;}</style>
 							<div class="elementor-widget-wrap">
 						<div class="elementor-element elementor-element-4f42819 sc_fly_static elementor-widget elementor-widget-heading" data-id="4f42819" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h5 class="elementor-heading-title elementor-size-default"><a href="tel:18408412569">+234 816 4513 139</a></h5>		</div>
+			<h5 class="elementor-heading-title elementor-size-default"><a href="tel:18408412569">+234 707 551 1670</a></h5>		</div>
 				</div>
 				<div class="elementor-element elementor-element-efdd0a4 sc_fly_static elementor-widget elementor-widget-spacer" data-id="efdd0a4" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
@@ -1246,7 +1246,7 @@ color: #fff;}</style>
 				</div>
 				<div class="elementor-element elementor-element-63068ae sc_fly_static elementor-widget elementor-widget-heading" data-id="63068ae" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default"><a href="mailto:info@rightsolvesys.com">info@rightsolvesys.com</a></span>		</div>
+			<span class="elementor-heading-title elementor-size-default"><a href="mailto:engage@rightsolvesys.com">engage@rightsolvesys.com</a></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-013bb75 sc_fly_static elementor-widget elementor-widget-spacer" data-id="013bb75" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">
