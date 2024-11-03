@@ -1,3 +1,61 @@
+<?php
+ini_set("include_path", '/home/ctliehfj/php:' . ini_get("include_path"));
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+function filter_string_polyfill(string $string): string
+{
+    $str = preg_replace('/\x00|<[^>]*>?/', '', $string);
+    return str_replace(["'", '"'], ['&#39;', '&#34;'], $str);
+}
+
+$mail = new PHPMailer; 
+//$mail->SMTPDebug = 3;      // Enable verbose debug output
+$mail->isSMTP();     // Set mailer to use SMTP
+$mail->Host = 'smtp.zoho.com;lim108.truehost.cloud';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;   // Enable SMTP authentication
+$mail->Username = 'engage@rightsolvesys.com';     // SMTP username
+$mail->Password = '';              // SMTP password
+$mail->SMTPSecure = 'tls';        // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;      // TCP port to connect to or 25 for non secure
+$mail->setFrom('engage@rightsolvesys.com', 'rightsolvesys.com');
+$mail->addAddress('engage@rightsolvesys.com', 'RightSolve Help Desk');     // Add a recipient
+$mail->addReplyTo('engage@rightsolvesys.com', 'RightSolve Help Desk');
+$mail->isHTML(false);            // Set email format to HTML
+$mail->Subject = 'Message from website visitor';
+
+if (isset($_POST["inputEmail"])) {
+    
+  if ($_POST["inputEmail"] != '' && $_POST["firstName"] != '' && $_POST["lastName"] != '' && $_POST["phone"] != '' && $_POST["msgTextarea"] != '') {
+		
+	$SenderEmail= filter_input(INPUT_POST, "inputEmail", FILTER_SANITIZE_EMAIL);
+	$firstName= filter_string_polyfill($_POST["firstName"]);
+	$lastName= filter_string_polyfill($_POST["lastName"]);
+	$phone= filter_string_polyfill($_POST["phone"]);
+    $message= filter_string_polyfill($_POST["msgTextarea"]);
+    $mailBody="Name: $firstName . '' . $lastName\r\nEmail: $SenderEmail\r\Phone: $phone\r\nVisitor Message: $message";
+    
+	$mail->Body    = $mailBody;
+	if(!$mail->send()) {
+		echo '<script>alert("Sorry! We could not send your message at this time. Please try again later.")</script>';
+		$mail->ErrorInfo;
+	} else {
+		echo '<script>alert("Thank you! Your message has been sent.\r\n A member of the team will respond soon.")</script>';
+	}
+
+} else {
+echo '<script>alert("Please review your entries and try again. All fields are required!")</script>';
+}
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US" class="no-js scheme_default">
 <head>
@@ -2287,26 +2345,26 @@ data-settings='{"stretch_section":"section-stretched"}'
                                             <div class="columns_wrap">
                                                 <div class="column-1_2">
                                                     <span class="style-line">
-                                                        <span class="wpcf7-form-control-wrap" data-name="your-name">
+                                                        <span class="wpcf7-form-control-wrap" data-name="firstName">
                                                             <input
                                                                 type="text"
-                                                                name="your-name"
+                                                                name="firstName"
                                                                 value=""
                                                                 size="40"
                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                 aria-required="true"
                                                                 aria-invalid="false"
-                                                                placeholder="Name"
+                                                                placeholder="First Name"
                                                             />
                                                         </span>
                                                     </span>
                                                 </div>
                                                 <div class="column-1_2">
                                                     <span class="style-line">
-                                                        <span class="wpcf7-form-control-wrap" data-name="your-last-name">
+                                                        <span class="wpcf7-form-control-wrap" data-name="lastName">
                                                             <input
                                                                 type="text"
-                                                                name="your-last-name"
+                                                                name="lastName"
                                                                 value=""
                                                                 size="40"
                                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
@@ -2321,10 +2379,10 @@ data-settings='{"stretch_section":"section-stretched"}'
                                             <div class="columns_wrap">
                                                 <div class="column-1_2">
                                                     <span class="style-line">
-                                                        <span class="wpcf7-form-control-wrap" data-name="your-email">
+                                                        <span class="wpcf7-form-control-wrap" data-name="inputEmail">
                                                             <input
                                                                 type="email"
-                                                                name="your-email"
+                                                                name="inputEmail"
                                                                 value=""
                                                                 size="40"
                                                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
@@ -2355,9 +2413,9 @@ data-settings='{"stretch_section":"section-stretched"}'
                                             <div class="columns_wrap margin-bottom">
                                                 <div class="column-1_1">
                                                     <span class="style-line">
-                                                        <span class="wpcf7-form-control-wrap" data-name="your-message">
+                                                        <span class="wpcf7-form-control-wrap" data-name="msgTextarea">
                                                             <textarea
-                                                                name="your-message"
+                                                                name="msgTextarea"
                                                                 cols="40"
                                                                 rows="10"
                                                                 class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
@@ -2369,7 +2427,7 @@ data-settings='{"stretch_section":"section-stretched"}'
                                                     </span>
                                                 </div>
                                             </div>
-                                            <p><input type="submit" value="Get In Touch" class="wpcf7-form-control has-spinner wpcf7-submit" /></p>
+                                            <p><input type="submit" value="Get In Touch" class="wpcf7-form-control wpcf7-submit" /></p>
                                         </div>
                                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                                     </form>
@@ -2494,7 +2552,7 @@ data-settings='{"stretch_section":"section-stretched"}'
                                 <div class="elementor-text-editor elementor-clearfix">
                                     <p>
                                         Enugu, Nigeria —<br />
-                                        1A Chime Ave, New Haven<br />
+                                        1A, Chime Avenue, New Haven<br />
                                         Enugu 400102
                                     </p>
                                 </div>

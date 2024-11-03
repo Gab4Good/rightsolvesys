@@ -1,28 +1,53 @@
 <?php
+ini_set("include_path", '/home/ctliehfj/php:' . ini_get("include_path"));
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+function filter_string_polyfill(string $string): string
+{
+    $str = preg_replace('/\x00|<[^>]*>?/', '', $string);
+    return str_replace(["'", '"'], ['&#39;', '&#34;'], $str);
+}
+
+$mail = new PHPMailer; 
+//$mail->SMTPDebug = 3;      // Enable verbose debug output
+$mail->isSMTP();     // Set mailer to use SMTP
+$mail->Host = 'smtp.zoho.com;lim108.truehost.cloud';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;   // Enable SMTP authentication
+$mail->Username = 'engage@rightsolvesys.com';     // SMTP username
+$mail->Password = '';              // SMTP password
+$mail->SMTPSecure = 'tls';        // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;      // TCP port to connect to or 25 for non secure
+$mail->setFrom('engage@rightsolvesys.com', 'rightsolvesys.com');
+$mail->addAddress('engage@rightsolvesys.com', 'RightSolve Help Desk');     // Add a recipient
+$mail->addReplyTo('engage@rightsolvesys.com', 'RightSolve Help Desk');
+$mail->isHTML(false);            // Set email format to HTML
+$mail->Subject = 'Message from website visitor';
 
 if (isset($_POST["inputEmail"])) {
     
-    $recipient="testUser@localhost.com";
-    $SendingEmail= "postmaster@localhost.com";
-    $subject="Message from website visitor";
-
   if ($_POST["inputEmail"] != '' && $_POST["inputName"] != '' && $_POST["msgTextarea"] != '') {
-	
+		
 	$SenderEmail= filter_input(INPUT_POST, "inputEmail", FILTER_SANITIZE_EMAIL);
-    $sender= filter_var($_POST["inputName"], FILTER_SANITIZE_STRING);
-
-    $message= filter_var($_POST["msgTextarea"], FILTER_SANITIZE_STRING);
-
-    $mailBody="Name: $sender\n\nEmail: $SenderEmail\n\n Visitor Message: $message";
-
-  if (mail($recipient, $subject, $mailBody, "From: Contact Form Mail System  <postmaster@localhost.com>")) {
-echo '<script>alert("Thank you! Your message has been sent.\r\n A member of the team will respond soon.")</script>';
-}  else {
-echo '<script>alert("Sorry! We could not send your message at this time. Please try again later.")</script>';
-}
+	$senderName= filter_string_polyfill($_POST["inputName"]);
+    $message= filter_string_polyfill($_POST["msgTextarea"]);
+    $mailBody="Name: $senderName\r\nEmail: $SenderEmail\r\nVisitor Message: $message";
+    
+	$mail->Body    = $mailBody;
+	if(!$mail->send()) {
+		echo '<script>alert("Sorry! We could not send your message at this time. Please try again later.")</script>';
+		$mail->ErrorInfo;
+	} else {
+		echo '<script>alert("Thank you! Your message has been sent.\r\n A member of the team will respond soon.")</script>';
+	}
 
 } else {
-echo '<script>alert("Please review your entries and try again.")</script>';
+echo '<script>alert("Please review your entries and try again. All fields are required!")</script>';
 }
 
 }
@@ -737,7 +762,7 @@ color: #fff;}</style>
 									<i class="flaticon-world-globe"></i>
 									<div class="info-text">
 										<h6>Our Address:</h6>
-										<p>1A Chime Ave, New Haven</p>
+										<p>1A, Chime Avenue, New Haven</p>
 										<p>Enugu 400102</p>
 										<p>Enugu, Nigeria</p>
 									</div>
@@ -808,6 +833,20 @@ color: #fff;}</style>
 															value=""
 															type="email"
 															name="inputEmail"
+														/>
+													</span>
+												</p>
+												<p>
+													<span class="wpcf7-form-control-wrap" data-name="inputPhone">
+														<input
+															size="40"
+															class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text"
+															aria-required="true"
+															aria-invalid="false"
+															placeholder="Your Phone Number *"
+															value=""
+															type="phone"
+															name="inputPhone"
 														/>
 													</span>
 												</p>
@@ -952,7 +991,7 @@ color: #fff;}</style>
                                 <div class="elementor-text-editor elementor-clearfix">
                                     <p>
                                         Enugu, Nigeria —<br />
-                                        1A Chime Ave, New Haven<br />
+                                        1A, Chime Avenue, New Haven<br />
                                         Enugu 400102
                                     </p>
                                 </div>
