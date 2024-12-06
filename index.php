@@ -438,6 +438,9 @@ color: #fff;}
 								<li id="menu-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936">
 									<a href="contacts"><span>Contacts</span></a>
 								</li>
+								<li id="menu-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936">
+									<a href="blog" target="_blank"><span>Blog</span></a>
+								</li>
 							</ul>
 						</nav>
 					</div>
@@ -636,6 +639,9 @@ color: #fff;}
                         </li>
                         <li id="menu_mobile-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936">
                             <a href="contacts"><span>Contacts</span></a>
+                        </li>
+                        <li id="menu_mobile-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936">
+                            <a href="blog" target="_blank"><span>Blog</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -2150,17 +2156,17 @@ data-settings='{"stretch_section":"section-stretched"}'
                                                     <div class="post_info">
                                                         <div class="post_descr">
                                                             <div class="post_meta">
-                                                                <span class="post_meta_item post_categories cat_sep"><a href="category/essentials/index.html" rel="category tag">Cybersecurity</a></span>
-                                                                <span class="post_meta_item post_date"><a href="golf-etiquette-and-basic-rules-on-the-course/index.html">Apr 21, 2024</a></span>
+                                                                <span class="post_meta_item post_categories cat_sep"><a href="https://rightsolvesys.com/blog/category/cybersecurity" rel="category tag">Cybersecurity</a></span>
+                                                                <span class="post_meta_item post_date"><a href="https://rightsolvesys.com/blog/safeguarding-your-digital-world-the-importance-of-good-cyber-hygiene/">Nov 18, 2024</a></span>
                                                             </div>
                                                         </div>
                                                         <h4 class="post_title">
-                                                            <a href="">
+                                                            <a href="https://rightsolvesys.com/blog/safeguarding-your-digital-world-the-importance-of-good-cyber-hygiene/" target="_blank">
                                                                 Safeguarding Your Digital World: The Importance of Good Cyber Hygiene
                                                             </a>
                                                             <span class="hover-arrow"></span>
                                                         </h4>
-                                                        <a class="post_link" href=""></a>
+                                                        <a class="post_link" href="https://rightsolvesys.com/blog/safeguarding-your-digital-world-the-importance-of-good-cyber-hygiene/" target="_blank"></a>
                                                     </div>
                                                 </div>
                                             </article>
@@ -2176,17 +2182,17 @@ data-settings='{"stretch_section":"section-stretched"}'
                                                     <div class="post_info">
                                                         <div class="post_descr">
                                                             <div class="post_meta">
-                                                                <span class="post_meta_item post_categories cat_sep"><a href="category/essentials/index.html" rel="category tag">IT Advisory</a></span>
-                                                                <span class="post_meta_item post_date"><a href="">Apr 22, 2024</a></span>
+                                                                <span class="post_meta_item post_categories cat_sep"><a href="https://rightsolvesys.com/blog/category/productivity/" rel="category tag" target="_blank">Productivity</a></span>
+                                                                <span class="post_meta_item post_date"><a href="https://rightsolvesys.com/blog/finding-the-perfect-device-a-guide-to-choosing-for-personal-and-business-use/" target="_blank">Nov 18, 2024</a></span>
                                                             </div>
                                                         </div>
                                                         <h4 class="post_title">
-                                                            <a href=""> 
+                                                            <a href="https://rightsolvesys.com/blog/finding-the-perfect-device-a-guide-to-choosing-for-personal-and-business-use/" target="_blank"> 
 																Finding the Perfect Device: A Guide to Choosing for Personal and Business Use 
 															</a>
                                                             <span class="hover-arrow"></span>
                                                         </h4>
-                                                        <a class="post_link" href=""></a>
+                                                        <a class="post_link" href="https://rightsolvesys.com/blog/finding-the-perfect-device-a-guide-to-choosing-for-personal-and-business-use/" target="_blank"></a>
                                                     </div>
                                                 </div>
                                             </article>
@@ -2202,17 +2208,17 @@ data-settings='{"stretch_section":"section-stretched"}'
                                                     <div class="post_info">
                                                         <div class="post_descr">
                                                             <div class="post_meta">
-                                                                <span class="post_meta_item post_categories cat_sep"><a href="category/essentials/index.html" rel="category tag">Brand Visibility</a></span>
-                                                                <span class="post_meta_item post_date"><a href="join-to-our-golf-club-and-get-your-best-score/index.html">Mar 27, 2024</a></span>
+                                                                <span class="post_meta_item post_categories cat_sep"><a href="https://rightsolvesys.com/blog/category/specials/" rel="category tag" target="_blank">Special Features</a></span>
+                                                                <span class="post_meta_item post_date"><a href="https://rightsolvesys.com/blog/boosting-brand-visibility-strategies-for-businesses-to-shine-online-in-2024/" target="_blank">Mar 27, 2024</a></span>
                                                             </div>
                                                         </div>
                                                         <h4 class="post_title">
-                                                            <a href=""> 
+                                                            <a href="https://rightsolvesys.com/blog/boosting-brand-visibility-strategies-for-businesses-to-shine-online-in-2024/" target="_blank"> 
 																Boosting Brand Visibility: Strategies for Businesses to Shine Online
 															</a>
                                                             <span class="hover-arrow"></span>
                                                         </h4>
-                                                        <a class="post_link" href=""></a>
+                                                        <a class="post_link" href="https://rightsolvesys.com/blog/boosting-brand-visibility-strategies-for-businesses-to-shine-online-in-2024/" target="_blank"></a>
                                                     </div>
                                                 </div>
                                             </article>
@@ -2231,7 +2237,7 @@ data-settings='{"stretch_section":"section-stretched"}'
                         <div class="elementor-element elementor-element-2c3194c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="2c3194c" data-element_type="widget" data-widget_type="trx_sc_button.default">
                             <div class="elementor-widget-container">
                                 <div class="sc_item_button sc_button_wrap sc_align_center">
-                                    <a href="blog" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                    <a href="blog" target="_blank" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
                                         <span class="sc_button_text"><span class="sc_button_title">View More Articles</span></span>
                                     </a>
                                 </div>
@@ -2649,6 +2655,9 @@ data-settings='{"stretch_section":"section-stretched"}'
                                             <li class="custom_links_list_item">
                                                 <a class="custom_links_list_item_link" href="contacts"><span class="custom_links_list_item_title">Contacts</span></a>
                                             </li>
+                                            <li class="custom_links_list_item">
+                                                <a class="custom_links_list_item_link" href="blog" target="_blank"><span class="custom_links_list_item_title">Blog</span></a>
+                                            </li>
                                         </ul>
                                     </aside>
                                 </div>
@@ -2941,7 +2950,7 @@ var wpcf7 = {"api":{"root":"https:\/\/golfclub.themerex.net\/wp-json\/","namespa
 /* ]]> */
 </script>
 <script type="text/javascript" defer="defer" src="wp-content/plugins/contact-form-7/includes/js/index4c7e.js?ver=5.6.2" id="contact-form-7-js"></script>
-<script type="text/javascript" defer="defer" src="wp-content/plugins/revslider/public/assets/js/rbtools.min8331.js?ver=6.5.18" async id="tp-tools-js"></script>
+
 <script type="text/javascript" id="trx_demo_panels-js-extra">
 /* <![CDATA[ */
 var TRX_DEMO_STORAGE = {"ajax_url":"https:\/\/golfclub.themerex.net\/wp-admin\/admin-ajax.php","ajax_nonce":"87c42a4fce","site_url":"https:\/\/golfclub.themerex.net","user_logged_in":"0","msg_ajax_error":"Invalid server response! Try again later.","tabs_delay":"3000"};
