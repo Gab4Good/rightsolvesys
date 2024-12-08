@@ -504,6 +504,9 @@ color: #fff;}</style>
 								<li id="menu-item-16936" class="menu-item menu-item-type-post_type current-menu-item current-menu-ancestor current-menu-parent menu-item-object-page menu-item-16936">
 									<a href="../contacts"><span>Contacts</span></a>
 								</li>
+								<li id="menu-item-16936" class="menu-item menu-item-type-post_type current-menu-item current-menu-ancestor current-menu-parent menu-item-object-page menu-item-16936">
+									<a href="../blog" target="_blank" id="blogMenuItem"><span>Blog</span></a>
+								</li>
 							</ul>
 						</nav>
 					</div>
@@ -702,6 +705,9 @@ color: #fff;}</style>
                         </li>
                         <li id="menu_mobile-item-16936" class="menu-item menu-item-type-post_type current-menu-ancestor current-menu-parent menu-item-object-page menu-item-16936">
                             <a href="../contacts"><span>Contacts</span></a>
+                        </li>
+                        <li id="menu_mobile-item-16936" class="menu-item menu-item-type-post_type current-menu-ancestor current-menu-parent menu-item-object-page menu-item-16936">
+                            <a href="../blog" target="_blank" id="blogMenuItem"><span>Blog</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -1089,7 +1095,7 @@ color: #fff;}</style>
                                                 <a class="custom_links_list_item_link" <a href="../contacts"><span class="custom_links_list_item_title">Contacts</span></a>
                                             </li>
                                             <li class="custom_links_list_item">
-                                                <a class="custom_links_list_item_link" <a href="../blog" target="_blank"><span class="custom_links_list_item_title">Blog</span></a>
+                                                <a class="custom_links_list_item_link" <a href="../blog" target="_blank" id="blogMenuItem"><span class="custom_links_list_item_title">Blog</span></a>
                                             </li>
                                         </ul>
                                     </aside>

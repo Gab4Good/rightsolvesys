@@ -6876,6 +6876,10 @@ body.sc_layouts_search_opened .top_panel {
   background-color: var(--theme-color-text_dark);
 }
 
+#blogMenuItem:after {
+  background-color: unset !important;
+}
+
 .menu_hover_zoom_line .sc_layouts_menu_nav > li > a:hover,
 .menu_hover_zoom_line .sc_layouts_menu_nav > li.sfHover > a {
   color: var(--theme-color-text_dark) !important;
@@ -15905,7 +15909,7 @@ form .error_field {
 .widget ul {
   font-size: 17px;
   margin: 0;
-  padding-left: 1.2em;
+/*padding-left: 1.2em; */
   list-style-type: none;
 }
 .widget ol ul,

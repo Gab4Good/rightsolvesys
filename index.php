@@ -439,7 +439,7 @@ color: #fff;}
 									<a href="contacts"><span>Contacts</span></a>
 								</li>
 								<li id="menu-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936">
-									<a href="blog" target="_blank"><span>Blog</span></a>
+									<a href="blog" target="_blank" id="blogMenuItem"><span>Blog</span></a>
 								</li>
 							</ul>
 						</nav>
@@ -641,7 +641,7 @@ color: #fff;}
                             <a href="contacts"><span>Contacts</span></a>
                         </li>
                         <li id="menu_mobile-item-16936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16936">
-                            <a href="blog" target="_blank"><span>Blog</span></a>
+                            <a href="blog" target="_blank" id="blogMenuItem"><span>Blog</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -2237,7 +2237,7 @@ data-settings='{"stretch_section":"section-stretched"}'
                         <div class="elementor-element elementor-element-2c3194c sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="2c3194c" data-element_type="widget" data-widget_type="trx_sc_button.default">
                             <div class="elementor-widget-container">
                                 <div class="sc_item_button sc_button_wrap sc_align_center">
-                                    <a href="blog" target="_blank" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                                    <a href="blog" target="_blank" id="blogMenuItem" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
                                         <span class="sc_button_text"><span class="sc_button_title">View More Articles</span></span>
                                     </a>
                                 </div>
@@ -2656,7 +2656,7 @@ data-settings='{"stretch_section":"section-stretched"}'
                                                 <a class="custom_links_list_item_link" href="contacts"><span class="custom_links_list_item_title">Contacts</span></a>
                                             </li>
                                             <li class="custom_links_list_item">
-                                                <a class="custom_links_list_item_link" href="blog" target="_blank"><span class="custom_links_list_item_title">Blog</span></a>
+                                                <a class="custom_links_list_item_link" href="blog" target="_blank" id="blogMenuItem"><span class="custom_links_list_item_title">Blog</span></a>
                                             </li>
                                         </ul>
                                     </aside>
