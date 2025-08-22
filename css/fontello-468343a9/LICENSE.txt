@@ -6,8 +6,8 @@ Font license info
    Copyright (C) 2013 by Aristeides Stathopoulos
 
    Author:    Aristeides Stathopoulos
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://aristeides.com/
+   License:   SIL (https://scripts.sil.org/OFL)
+   Homepage:  https://aristeides.com/
 
 
 ## Font Awesome
@@ -16,7 +16,7 @@ Font license info
 
    Author:    Dave Gandy
    License:   SIL ()
-   Homepage:  http://fortawesome.github.com/Font-Awesome/
+   Homepage:  https://fortawesome.github.com/Font-Awesome/
 
 
 ## Linecons
@@ -25,7 +25,7 @@ Font license info
 
    Author:    Designmodo for Smashing Magazine
    License:   CC BY ()
-   Homepage:  http://designmodo.com/linecons-free/
+   Homepage:  https://designmodo.com/linecons-free/
 
 
 ## Entypo
@@ -33,7 +33,7 @@ Font license info
    Copyright (C) 2012 by Daniel Bruce
 
    Author:    Daniel Bruce
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://www.entypo.com
+   License:   SIL (https://scripts.sil.org/OFL)
+   Homepage:  https://www.entypo.com
 
 

@@ -6,8 +6,8 @@ Font license info
    (c) Stephen Hutchings 2012
 
    Author:    Stephen Hutchings
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://typicons.com/
+   License:   SIL (https://scripts.sil.org/OFL)
+   Homepage:  https://typicons.com/
 
 
 ## Modern Pictograms
@@ -15,7 +15,7 @@ Font license info
    Copyright (c) 2012 by John Caserta. All rights reserved.
 
    Author:    John Caserta
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://thedesignoffice.org/project/modern-pictograms/
+   License:   SIL (https://scripts.sil.org/OFL)
+   Homepage:  https://thedesignoffice.org/project/modern-pictograms/
 
 
