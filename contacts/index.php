@@ -19,13 +19,13 @@ $mail = new PHPMailer;
 $mail->isSMTP();     // Set mailer to use SMTP
 $mail->Host = 'smtp.zoho.com;lim108.truehost.cloud';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;   // Enable SMTP authentication
-$mail->Username = 'engage@rightsolvesys.com';     // SMTP username
+$mail->Username = 'hello@rightsolvesys.com';     // SMTP username
 $mail->Password = '';              // SMTP password
 $mail->SMTPSecure = 'tls';        // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;      // TCP port to connect to or 25 for non secure
-$mail->setFrom('engage@rightsolvesys.com', 'rightsolvesys.com');
-$mail->addAddress('engage@rightsolvesys.com', 'RightSolve Help Desk');     // Add a recipient
-$mail->addReplyTo('engage@rightsolvesys.com', 'RightSolve Help Desk');
+$mail->setFrom('hello@rightsolvesys.com', 'rightsolvesys.com');
+$mail->addAddress('hello@rightsolvesys.com', 'RightSolve Help Desk');     // Add a recipient
+$mail->addReplyTo('hello@rightsolvesys.com', 'RightSolve Help Desk');
 $mail->isHTML(false);            // Set email format to HTML
 $mail->Subject = 'Message from website visitor';
 
@@ -778,7 +778,7 @@ color: #fff;}</style>
 									<i class="flaticon-envelope"></i>
 									<div class="info-text">
 										<h6>Our Mailbox:</h6>
-										<p>engage@rightsolvesys.com</p>
+										<p>hello@rightsolvesys.com</p>
 									</div>
 								</div>
 							</div>
@@ -1015,7 +1015,7 @@ color: #fff;}</style>
                         >
                             <div class="elementor-widget-container">
                                 <div class="elementor-text-editor elementor-clearfix">
-                                    <p><a class="underline_anim" href="mailto:engage@rightsolvesys.com">engage@rightsolvesys.com</a></p>
+                                    <p><a class="underline_anim" href="mailto:hello@rightsolvesys.com">hello@rightsolvesys.com</a></p>
                                 </div>
                             </div>
                         </div>
@@ -1291,7 +1291,7 @@ color: #fff;}</style>
 				</div>
 				<div class="elementor-element elementor-element-63068ae sc_fly_static elementor-widget elementor-widget-heading" data-id="63068ae" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<span class="elementor-heading-title elementor-size-default"><a href="mailto:engage@rightsolvesys.com">engage@rightsolvesys.com</a></span>		</div>
+			<span class="elementor-heading-title elementor-size-default"><a href="mailto:hello@rightsolvesys.com">hello@rightsolvesys.com</a></span>		</div>
 				</div>
 				<div class="elementor-element elementor-element-013bb75 sc_fly_static elementor-widget elementor-widget-spacer" data-id="013bb75" data-element_type="widget" data-widget_type="spacer.default">
 				<div class="elementor-widget-container">

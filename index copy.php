@@ -19,13 +19,13 @@ $mail = new PHPMailer;
 $mail->isSMTP();     // Set mailer to use SMTP
 $mail->Host = 'smtp.zoho.com;lim108.truehost.cloud';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;   // Enable SMTP authentication
-$mail->Username = 'engage@rightsolvesys.com';     // SMTP username
+$mail->Username = 'hello@rightsolvesys.com';     // SMTP username
 $mail->Password = '';              // SMTP password
 $mail->SMTPSecure = 'tls';        // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;      // TCP port to connect to or 25 for non secure
-$mail->setFrom('engage@rightsolvesys.com', 'rightsolvesys.com');
-$mail->addAddress('engage@rightsolvesys.com', 'RightSolve Help Desk');     // Add a recipient
-$mail->addReplyTo('engage@rightsolvesys.com', 'RightSolve Help Desk');
+$mail->setFrom('hello@rightsolvesys.com', 'rightsolvesys.com');
+$mail->addAddress('hello@rightsolvesys.com', 'RightSolve Help Desk');     // Add a recipient
+$mail->addReplyTo('hello@rightsolvesys.com', 'RightSolve Help Desk');
 $mail->isHTML(false);            // Set email format to HTML
 $mail->Subject = 'Message from website visitor';
 
@@ -2549,7 +2549,7 @@ data-settings='{"stretch_section":"section-stretched"}'
                         >
                             <div class="elementor-widget-container">
                                 <div class="elementor-text-editor elementor-clearfix">
-                                    <p><a class="underline_anim" href="mailto:engage@rightsolvesys.com">engage@rightsolvesys.com</a></p>
+                                    <p><a class="underline_anim" href="mailto:hello@rightsolvesys.com">hello@rightsolvesys.com</a></p>
                                 </div>
                             </div>
                         </div>
